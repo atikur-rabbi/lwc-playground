@@ -1,0 +1,42 @@
+{
+    "name": "@lwc-components/lwc-test1",
+    "version": "1.0.5",
+    "description": "",
+    "main": "index.js",
+    "publishConfig": {
+      "access": "public"
+    },
+    "scripts": {
+      "build": "rollup -c --environment production",
+      "start": "serve",
+      "dev": "run-p --race start watch",
+      "autopublish": "npx auto-version && npm run-script build",
+      "watch": "rollup -c --watch"
+    },
+    "devDependencies": {
+      "@lwc/compiler": "2.32.1",
+      "@lwc/engine-dom": "2.32.1",
+      "@lwc/rollup-plugin": "2.32.1",
+      "@lwc/synthetic-shadow": "2.32.1",
+      "@lwc/wire-service": "2.32.1",
+    
+      "rollup": "2.21.0",
+      "@rollup/plugin-replace": "2.2.0"
+
+      
+    },
+    "lwc": {
+        "modules": [
+            {
+                "dir": "src/modules"
+            }
+        ]
+    },
+    "volta": {
+        "node": "16.17.0",
+        "yarn": "1.22.19"
+    },
+  
+    "author": "Atikur Rabbi",
+    "license": "ISC"
+  }
